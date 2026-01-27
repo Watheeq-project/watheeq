@@ -1,0 +1,8 @@
+{
+  "HomePage":{
+    "title" : "Next js"
+  },
+  "login" : {
+    "title": "login"
+  }
+}
