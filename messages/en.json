@@ -1,8 +1,37 @@
 {
-  "HomePage":{
-    "title" : "Next js"
+  "HomePage": {
+    "title": "Next js"
   },
-  "login" : {
+  "login": {
     "title": "login"
+  },
+  "authLayout": {
+    "welcomeTitle": "Welcome to Watheeq Financial Platform",
+    "welcomeDescription": "Watheeq aims to become your preferred financial and investment partner by offering diversified opportunities and comprehensive Shariah-compliant financial services.",
+    "copyright": "All rights reserved - Watheeq Financial Platform © 2024",
+    "contact": "Contact us",
+    "about": "About",
+    "terms": "Terms & Conditions"
+  },
+  "resetPassword": {
+    "back": "Back",
+    "title": "New password",
+    "description": "Create a strong password to protect your account and avoid using easy or commonly known passwords."
+  },
+  "resetPasswordForm": {
+    "newPassword": "New password",
+    "confirmPassword": "Confirm your password",
+    "placeholder": "********",
+    "submit": "Confirm"
+  },
+  "resetPasswordSuccess": {
+    "title": "Password reset successful",
+    "description": "Your new password has been set. You can now sign in.",
+    "login": "Sign in"
+  },
+  "errors": {
+    "newPasswordMin": "Password must be at least 8 characters",
+    "confirmPasswordMin": "Please confirm your password",
+    "passwordsMismatch": "Passwords do not match"
   }
 }
