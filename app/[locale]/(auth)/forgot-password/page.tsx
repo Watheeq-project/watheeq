@@ -1,10 +1,10 @@
-import ResetPasswordForm from "../../../../features/auth/components/ResetPasswordForm";
+import ForgotPasswordForm from "../../../../features/auth/components/ForgotPasswordForm";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 
-export default function ResetPassword() {
-  const t = useTranslations("resetPassword");
+export default function ForgotPassword() {
+  const t = useTranslations("forgotPassword");
   const locale = useLocale();
 
   const Icon = locale === "en" ? ArrowLeft : ArrowRight;
@@ -26,11 +26,11 @@ export default function ResetPassword() {
       </h1>
 
       <p className="mt-3 text-sm leading-6 text-[#A5A5A5] text-start">
-        {t("description")}
+        {t("subtitle")}
       </p>
 
       <div className="mt-8">
-        <ResetPasswordForm />
+        <ForgotPasswordForm />
       </div>
     </div>
   );

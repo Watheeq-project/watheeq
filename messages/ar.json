@@ -13,6 +13,17 @@
     "about": "حول المنصة",
     "terms": "الشروط والأحكام"
   },
+  "forgotPassword": {
+    "back": "رجوع",
+    "title": "نسيت كلمة المرور",
+    "subtitle": "ادخل رقم الجوال المسجل في المنصة",
+    "phoneLabel": "رقم الجوال",
+    "phonePlaceholder": "5XXXXXXXX",
+    "countryCodeAria": "كود الدولة",
+    "next": "التالي",
+    "hint": "",
+    "fullNumberPreview": "الرقم: {value}"
+  },
   "resetPassword": {
     "back": "رجوع",
     "title": "كلمة المرور الجديدة",
@@ -30,8 +41,12 @@
     "login": "تسجيل الدخول"
   },
   "errors": {
+    "phoneMin": "رقم الجوال قصير جداً",
+    "phoneMax": "رقم الجوال طويل جداً",
+    "phoneDigitsOnly": "رقم الجوال لازم يكون أرقام فقط",
     "newPasswordMin": "كلمة المرور لازم تكون 8 أحرف على الأقل",
     "confirmPasswordMin": "أكد كلمة المرور",
-    "passwordsMismatch": "كلمتا المرور غير متطابقتين"
+    "passwordsMismatch": "كلمتا المرور غير متطابقتين",
+    "saudiPhoneInvalid": "رقم الجوال يجب أن يكون سعودي ويبدأ بـ 5 ويتكون من 9 أرقام"
   }
 }
