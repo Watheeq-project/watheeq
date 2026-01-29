@@ -13,6 +13,17 @@
     "about": "About",
     "terms": "Terms & Conditions"
   },
+  "forgotPassword": {
+    "back": "Back",
+    "title": "Forgot password",
+    "subtitle": "Enter the phone number registered on the platform",
+    "phoneLabel": "Phone number",
+    "phonePlaceholder": "5XXXXXXXX",
+    "countryCodeAria": "Country code",
+    "next": "Next",
+    "hint": "",
+    "fullNumberPreview": "Number: {value}"
+  },
   "resetPassword": {
     "back": "Back",
     "title": "New password",
@@ -30,8 +41,12 @@
     "login": "Sign in"
   },
   "errors": {
+    "phoneMin": "Phone number is too short",
+    "phoneMax": "Phone number is too long",
+    "phoneDigitsOnly": "Phone number must contain digits only",
     "newPasswordMin": "Password must be at least 8 characters",
     "confirmPasswordMin": "Please confirm your password",
-    "passwordsMismatch": "Passwords do not match"
+    "passwordsMismatch": "Passwords do not match",
+    "saudiPhoneInvalid": "Phone number must be a valid Saudi number starting with 5"
   }
 }
