@@ -64,7 +64,7 @@ export default function ResetPasswordForm() {
 
       <Button
         type="submit"
-        className="h-11 w-full rounded-lg bg-[#C5A377] text-[#FFFFFF]"
+        className="h-11 w-full rounded-lg bg-[#C5A377] text-[#FFFFFF] cursor-pointer"
         disabled={isSubmitting}
       >
         {t("submit")}

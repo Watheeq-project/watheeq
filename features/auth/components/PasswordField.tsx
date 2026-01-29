@@ -42,7 +42,7 @@ export default function PasswordField({
           variant="ghost"
           size="icon"
           onClick={() => setShow((v) => !v)}
-          className="absolute top-1/2 -translate-y-1/2 end-3 h-9 w-9 p-0 text-[#000000]/60 hover:text-[#000000]"
+          className="absolute top-1/2 -translate-y-1/2 end-3 h-9 w-9 p-0 text-[#000000]/60 hover:text-[#000000] cursor-pointer"
           aria-label={show ? "Hide password" : "Show password"}
         >
           <Icon size={18} strokeWidth={1.8} />

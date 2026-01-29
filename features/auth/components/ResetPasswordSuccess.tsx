@@ -28,7 +28,7 @@ export default function ResetPasswordSuccess() {
             </div>
             <Button
                 asChild
-                className="mt-8 h-12 w-full rounded-lg bg-[#C5A377] text-[#FFFFFF]"
+                className="mt-8 h-12 w-full rounded-lg bg-[#C5A377] text-[#FFFFFF] cursor-pointer"
             >
                 <Link href="/login">{t("login")}</Link>
             </Button>
