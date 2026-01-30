@@ -21,7 +21,7 @@ export default function ResetPassword() {
         </Link>
       </div>
 
-      <h1 className="text-3xl font-extrabold text-[#071638] text-start">
+      <h1 className="text-3xl font-bold  text-[#071638] text-start">
         {t("title")}
       </h1>
 
