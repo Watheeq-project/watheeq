@@ -24,6 +24,15 @@
     "hint": "",
     "fullNumberPreview": "Number: {value}"
   },
+  "verifyOtp": {
+    "back": "Back",
+    "title": "Verification code",
+    "subtitle": "Enter the code sent to your phone number",
+    "maskedPhone": "212********",
+    "confirm": "Confirm",
+    "expiresIn": "Code expires in {time}",
+    "resend": "Resend code"
+  },
   "resetPassword": {
     "back": "Back",
     "title": "New password",
@@ -47,6 +56,8 @@
     "newPasswordMin": "Password must be at least 8 characters",
     "confirmPasswordMin": "Please confirm your password",
     "passwordsMismatch": "Passwords do not match",
-    "saudiPhoneInvalid": "Phone number must be a valid Saudi number starting with 5"
+    "saudiPhoneInvalid": "Phone number must be a valid Saudi number starting with 5",
+    "otpRequired": "Please enter the 6-digit code",
+    "otpInvalid": "The code must be 6 digits"
   }
 }

@@ -53,7 +53,7 @@ export default function ForgotPasswordForm() {
 
             <Button
                 type="submit"
-                className="h-11 w-full rounded-lg bg-[#C5A377] text-white hover:opacity-90"
+                className="h-11 w-full rounded-lg bg-[#C5A377] text-white hover:opacity-90 cursor-pointer"
                 disabled={isSubmitting}
             >
                 {t("next")}
