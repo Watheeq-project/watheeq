@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #293c7c;
+  --color-secondary: #c5a377;
+  --color-text-primary: #1b1b1b;
+  --color-text-third: #a5a5a5;
+}
+
+@layer components {
+  .steps-title {
+    @apply text-xl md:text-2xl font-bold text-primary relative;
+  }
+
+  .steps-title::after {
+    content: "";
+    @apply block w-[10%] h-[1px] bg-secondary mx-auto mt-2;
+  }
+}
