@@ -1,13 +1,91 @@
 {
   "HomePage": {
-    "title": "Next js"
+    "title": "Next"
   },
   "login": {
-    "title": "login"
+    "title": "Login",
+    "subtitle": "Sign in to your account to access your personalized investment dashboard and stay up to date with your investments.",
+    "loginVia": "Login via",
+    "tabs": {
+      "company": "Companies",
+      "users": "Individuals"
+    },
+    "phoneLabel": "Mobile number",
+    "phonePlaceholder": "5xxxxxxxxx",
+    "passwordLabel": "Password",
+    "passwordPlaceholder": "Enter your password",
+    "forgotPassword": "Forgot your password?",
+    "remember": "Remember me",
+    "submit": "Login",
+    "noAccount": "Don't have an account?",
+    "register": "Register"
+  },
+  "register": {
+    "stepsTitle": "Steps to create a new account on Watheeq Financial Platform",
+    "steps": {
+      "chooseType": {
+        "title": "Choose account type",
+        "subtitle": "Fill in the required data to register"
+      },
+      "nafath": {
+        "title": "Nafath verification",
+        "subtitle": "Confirm your request"
+      },
+      "createAccount": {
+        "title": "Create account",
+        "subtitle": "Enter the platform"
+      },
+      "kyc": {
+        "title": "KYC form",
+        "subtitle": "Important details to become an eligible investor"
+      }
+    },
+    "formTitle": "Choose the investment account type then fill in the required data",
+    "tabs": {
+      "users": "Individuals",
+      "company": "Companies"
+    },
+    "fields": {
+      "phone": "Mobile number",
+      "idNumber": "ID number",
+      "email": "Email",
+      "birthDate": "Date of birth",
+      "password": "Password"
+    },
+    "placeholders": {
+      "phone": "5xxxxxxxxx",
+      "idNumber": "Enter ID number",
+      "email": "Enter email",
+      "birthDate": "Enter date of birth",
+      "password": "Enter password"
+    },
+    "passwordRules": {
+      "len": "Password must be at least 8 characters",
+      "upper": "Password must contain an uppercase letter",
+      "lower": "Password must contain a lowercase letter",
+      "num": "Password must contain at least one number",
+      "special": "Password must contain a symbol like @$!%*#?&"
+    },
+    "acceptNationalData": "I acknowledge my consent for Watheeq Financial to obtain my information from the National Data Center",
+    "next": "Next",
+    "alreadyHaveAccount": "Already activated your account?",
+    "login": "Login",
+    "accountCreated": {
+      "title": "Account created successfully",
+      "description": "To activate your investment account on Watheeq, please log in by entering the registered mobile number and password, then complete the KYC form",
+      "login": "Login",
+      "beforeYouStartTitle": "Before you start, you may need to prepare the following to fill in the KYC form:",
+      "checklist": {
+        "nationalId": "National ID details",
+        "nationalAddress": "National address details",
+        "bankAccount": "Bank account details",
+        "eligibility": "Eligibility proof"
+      }
+    }
   },
   "authLayout": {
     "welcomeTitle": "Welcome to Watheeq Financial Platform",
-    "welcomeDescription": "Watheeq aims to become your preferred financial and investment partner by offering diversified opportunities and comprehensive Shariah-compliant financial services.",
+    "welcomeDescription": "Watheeq aims to become the preferred financial and investment partner for clients by providing diversified investment opportunities and integrated financial services compliant with Islamic Sharia.",
     "copyright": "All rights reserved - Watheeq Financial Platform © 2024",
     "contact": "Contact us",
     "about": "About",
@@ -15,28 +93,27 @@
   },
   "forgotPassword": {
     "back": "Back",
-    "title": "Forgot password",
-    "subtitle": "Enter the phone number registered on the platform",
+    "title": "Forgot your password?",
+    "subtitle": "Enter your mobile number and we’ll send you a verification code to reset your password.",
     "phoneLabel": "Phone number",
-    "phonePlaceholder": "5XXXXXXXX",
-    "countryCodeAria": "Country code",
-    "next": "Next",
-    "hint": "",
-    "fullNumberPreview": "Number: {value}"
+    "phonePlaceholder": "5xxxxxxxxx",
+    "next": "Next"
   },
   "verifyOtp": {
     "back": "Back",
-    "title": "Verification code",
-    "subtitle": "Enter the code sent to your phone number",
-    "maskedPhone": "212********",
+    "title": "Enter verification code",
+    "subtitle": "We sent a verification code to your mobile number",
+    "maskedPhone": "*********",
+    "resend": "Resend code",
+    "timer": "Resend in",
+    "verify": "Verify",
     "confirm": "Confirm",
-    "expiresIn": "Code expires in {time}",
-    "resend": "Resend code"
+    "expiresIn": "Expires in {time}"
   },
   "resetPassword": {
     "back": "Back",
     "title": "New password",
-    "description": "Create a strong password to protect your account and avoid using easy or commonly known passwords."
+    "description": "Create a strong password to protect your account effectively and avoid easy or common passwords."
   },
   "resetPasswordForm": {
     "newPassword": "New password",
@@ -45,19 +122,57 @@
     "submit": "Confirm"
   },
   "resetPasswordSuccess": {
-    "title": "Password reset successful",
-    "description": "Your new password has been set. You can now sign in.",
-    "login": "Sign in"
+    "title": "Password changed successfully",
+    "description": "You can now log in using your new password.",
+    "login": "Login"
   },
   "errors": {
-    "phoneMin": "Phone number is too short",
-    "phoneMax": "Phone number is too long",
-    "phoneDigitsOnly": "Phone number must contain digits only",
+    "required": "This field is required",
+    "invalidEmail": "Invalid email",
+    "passwordMismatch": "Passwords do not match",
+    "passwordMin": "Password must be at least 8 characters",
+    "saudiPhoneInvalid": "Invalid mobile number",
+    "otpRequired": "OTP is required",
+    "otpInvalid": "Invalid OTP",
     "newPasswordMin": "Password must be at least 8 characters",
-    "confirmPasswordMin": "Please confirm your password",
+    "confirmPasswordMin": "Confirm password must be at least 8 characters",
     "passwordsMismatch": "Passwords do not match",
-    "saudiPhoneInvalid": "Phone number must be a valid Saudi number starting with 5",
-    "otpRequired": "Please enter the 6-digit code",
-    "otpInvalid": "The code must be 6 digits"
+    "loginPasswordMin": "Password must be at least 6 characters",
+    "idNumberInvalid": "Invalid ID number",
+    "birthDateInvalid": "Invalid birth date",
+    "registerPasswordRules": "Password does not meet requirements",
+    "acceptNationalDataRequired": "You must accept to continue"
+  },
+  "common": {
+    "select": "Select",
+    "language": {
+      "english": "English",
+      "arabic": "عربي"
+    }
+  },
+  "registerNafath": {
+    "nafath": "Nafath",
+    "title": "Identity verification code",
+    "desc": "Please open the Nafath app and confirm the request by selecting the number shown to you.",
+    "expires": "Code expires in",
+    "resend": "Resend verification code"
+  },
+  "registerAccountCreated": {
+    "title": "Account created successfully",
+    "description": "To activate your investment account on Watheeq, please log in using your registered mobile number and password, then complete the KYC form.",
+    "login": "Login",
+    "beforeYouStartTitle": "Before you start, you may need to prepare the following to fill in the KYC form:",
+    "checklist": {
+      "nationalId": "National ID details",
+      "nationalAddress": "National address details",
+      "bankAccount": "Bank account details",
+      "eligibility": "Eligibility proof"
+    },
+    "alreadyHaveAccount": "Already activated your account?",
+    "loginLink": "Login"
+  },
+  "registerKyc": {
+    "title": "KYC form",
+    "desc": "The KYC form will be added here with the same platform design."
   }
 }

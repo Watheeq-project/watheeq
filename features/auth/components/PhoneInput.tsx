@@ -1,8 +1,11 @@
 "use client";
 
-import ReactCountryFlag from "react-country-flag";
+import Image from "next/image";
 import { Input } from "@/components/ui/input";
 import { UseFormRegisterReturn } from "react-hook-form";
+
+import danger from "../../../public/icons/danger.png";
+import saudiFlag from "../../../public/soudy.png";
 
 type PhoneInputProps = {
     label: string;
@@ -13,6 +16,7 @@ type PhoneInputProps = {
 
 const SAUDI_CODE = "+966";
 const MAX_LEN = 9;
+const PREFIX_W = "w-[80px]";
 
 export default function PhoneInput({
     label,
@@ -22,24 +26,29 @@ export default function PhoneInput({
 }: PhoneInputProps) {
     return (
         <div className="space-y-2">
-            <label className="block text-sm font-semibold text-[#000000] text-left [dir='rtl']:text-right">
+            <label className="block text-sm font-semibold text-[#000000] text-start [dir='rtl']:text-right">
                 {label}
             </label>
 
-            <div className="flex h-11 w-full items-center overflow-hidden rounded-lg border border-border bg-white [dir='rtl']:flex-row-reverse">
-                <div className="flex h-full items-center gap-2 px-3 border-e border-border [dir='rtl']:border-e-0 [dir='rtl']:border-s [dir='rtl']:flex-row-reverse">
-                    <ReactCountryFlag
-                        countryCode="SA"
-                        svg
-                        aria-label="Saudi Arabia"
-                        style={{
-                            width: "20px",
-                            height: "20px",
-                            borderRadius: "9999px",
-                            objectFit: "cover",
-                        }}
+            <div className="relative h-11 w-full overflow-hidden rounded-lg border border-[#D6D6D6] bg-[#FFFFFF]">
+                <div
+                    className={[
+                        "absolute left-0 top-0 h-full",
+                        PREFIX_W,
+                        "flex items-center justify-center gap-2 px-3",
+                        "border-r border-[#D6D6D6]",
+                    ].join(" ")}
+                >
+                    <Image
+                        src={saudiFlag}
+                        alt="Saudi Arabia"
+                        width={20}
+                        height={20}
+                        className="rounded-full object-cover"
+                        priority
                     />
-                    <span className="text-sm font-medium text-[#1B1B1B] [dir='rtl']:direction-ltr">
+
+                    <span dir="ltr" className="text-sm font-medium text-[#1B1B1B]">
                         {SAUDI_CODE}
                     </span>
                 </div>
@@ -49,12 +58,15 @@ export default function PhoneInput({
                     inputMode="numeric"
                     autoComplete="tel"
                     placeholder={placeholder}
-                    className="h-11 flex-1 border-0 shadow-none focus-visible:ring-0 focus-visible:ring-offset-0 px-3 text-sm text-left [dir='rtl']:text-right"
+                    className={[
+                        "h-11 w-full border-0 shadow-none",
+                        "focus-visible:ring-0 focus-visible:ring-offset-0",
+                        "pl-[92px] pr-3",
+                        "text-sm text-left [dir='rtl']:text-right",
+                    ].join(" ")}
                     {...register}
                     onChange={(e) => {
-                        const digits = e.target.value
-                            .replace(/\D/g, "")
-                            .slice(0, MAX_LEN);
+                        const digits = e.target.value.replace(/\D/g, "").slice(0, MAX_LEN);
                         e.target.value = digits;
                         register.onChange(e);
                     }}
@@ -62,9 +74,10 @@ export default function PhoneInput({
             </div>
 
             {error ? (
-                <p className="text-xs text-red-600 text-left [dir='rtl']:text-right">
-                    {error}
-                </p>
+                <div className="flex items-center gap-2 justify-start text-xs text-red-600">
+                    <Image src={danger} alt="error" width={16} height={16} priority />
+                    <span className="[dir='rtl']:text-right">{error}</span>
+                </div>
             ) : null}
         </div>
     );

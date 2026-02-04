@@ -1,8 +1,9 @@
 "use client";
 
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useEffect, useMemo, useRef, useState, useTransition } from "react";
 import { useRouter, usePathname } from "@/i18n/navigation";
+import { useSearchParams } from "next/navigation";
 import ReactCountryFlag from "react-country-flag";
 import { ChevronDown } from "lucide-react";
 
@@ -16,17 +17,19 @@ export default function LanguageSwitcher() {
     const [isPending, startTransition] = useTransition();
     const router = useRouter();
     const pathname = usePathname();
+    const searchParams = useSearchParams();
     const activeLocale = useLocale() as "en" | "ar";
+    const t = useTranslations("common");
 
     const [open, setOpen] = useState(false);
     const wrapperRef = useRef<HTMLDivElement | null>(null);
 
     const options: LangOption[] = useMemo(
         () => [
-            { locale: "en", label: "English", countryCode: "US" },
-            { locale: "ar", label: "عربي", countryCode: "SA" },
+            { locale: "en", label: t("language.english"), countryCode: "US" },
+            { locale: "ar", label: t("language.arabic"), countryCode: "SA" },
         ],
-        []
+        [t]
     );
 
     const current = options.find((o) => o.locale === activeLocale) ?? options[0];
@@ -38,7 +41,11 @@ export default function LanguageSwitcher() {
         }
 
         startTransition(() => {
-            router.replace(pathname, { locale: nextLocale });
+            const safePathname = pathname || "/";
+            const qs = searchParams?.toString();
+            const href = qs ? `${safePathname}?${qs}` : safePathname;
+
+            router.replace(href, { locale: nextLocale });
             setOpen(false);
         });
     };

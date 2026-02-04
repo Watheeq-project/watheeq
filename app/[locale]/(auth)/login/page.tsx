@@ -1,20 +1,33 @@
-import {useTranslations} from "next-intl";
-import LoginLogo from "./LoginLogo";
-import LoginHeader from "./LoginHeader";
-import LoginForm from "./LoginForm";
-import LoginFooter from "./LoginFooter";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
+import LoginBrand from "../../../../features/auth/components/LoginBrand";
+import LoginHeader from "../../../../features/auth/components/LoginHeader";
+import LoginForm from "../../../../features/auth/components/LoginForm";
 
-export default function Home() {
-    const t = useTranslations("login")
+export default function LoginPage() {
+  const t = useTranslations("login");
+
   return (
-   <div className="pb-6">
-      <div className="flex items-center flex-col justify-center pt-39  ">
-        <LoginLogo />
-      <LoginHeader />
-      <LoginForm />
+    <div className="w-full">
+      <div className="flex flex-col items-center justify-center">
+        <LoginBrand />
+
+        <div className="mt-2 w-full">
+          <LoginHeader title={t("title")} subtitle={t("subtitle")} />
+
+          <div className="mt-5 rounded-[8px] border border-[#EEEEEE] bg-white p-5 shadow-sm">
+            <LoginForm />
+          </div>
+
+          <div className="mt-3 text-center text-[14px] font-medium">
+            <span className="text-[#1B1B1B]">{t("noAccount")}</span>{" "}
+            <Link href="/register" className="text-[#2A73FF] hover:opacity-80">
+              {t("register")}
+            </Link>
+          </div>
+        </div>
       </div>
-      {/* <LoginFooter /> */}
     </div>
   );
 }
